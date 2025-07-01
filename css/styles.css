@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
