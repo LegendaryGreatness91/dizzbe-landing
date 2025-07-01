@@ -16,10 +16,18 @@
   }
 }
 
-.fade-delay-1 { animation-delay: 0.2s; }
-.fade-delay-2 { animation-delay: 0.4s; }
-.fade-delay-3 { animation-delay: 0.6s; }
-.fade-delay-4 { animation-delay: 0.8s; }
+.fade-delay-1 {
+  animation-delay: 0.2s;
+}
+.fade-delay-2 {
+  animation-delay: 0.4s;
+}
+.fade-delay-3 {
+  animation-delay: 0.6s;
+}
+.fade-delay-4 {
+  animation-delay: 0.8s;
+}
 
 /* === Buttons === */
 .button-animate {
@@ -33,11 +41,22 @@
 
 /* === Input === */
 .input-style {
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  transition: border 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .input-style:focus {
   border-color: #FF6A00;
+  background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.3);
   outline: none;
+}
+
+/* === Card Hover Animation === */
+.card-animate {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-animate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
