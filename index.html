@@ -12,12 +12,6 @@
   <link href="./css/output.css" rel="stylesheet" />
   <!-- AOS Animations CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Hero text shadow for readability */
-    .hero-text-shadow {
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    }
-  </style>
 </head>
 <body class="bg-gradient-to-b from-black via-dark to-black text-white font-body relative">
 
@@ -32,13 +26,17 @@
     </video>
 
     <!-- Constrained Heading & Paragraph -->
-    <h1 class="max-w-2xl mx-auto text-2xl md:text-6xl font-heading font-bold mb-4 leading-normal tracking-tight z-10 hero-text-shadow" data-aos="fade-up">
+    <h1 class="max-w-2xl mx-auto text-2xl md:text-6xl font-heading font-bold mb-4 leading-snug tracking-tight z-10" data-aos="fade-up">
       Shop Like You Have a Personal Stylist — Without Spending Like One.
     </h1>
-    <p class="max-w-2xl mx-auto mb-8 text-gray-400 text-lg z-10 hero-text-shadow" data-aos="fade-up" data-aos-delay="200">
+    <p class="max-w-2xl mx-auto mb-8 text-gray-400 text-lg z-10" data-aos="fade-up" data-aos-delay="200">
       Discover curated fashion from underground brands, tailored to your style in seconds. Dizzbe makes shopping feel effortless, exclusive, and addictive.
     </p>
-    <button class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate z-10" data-aos="fade-up" data-aos-delay="400">
+    <button
+      onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+      class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate z-10"
+      data-aos="fade-up"
+      data-aos-delay="400">
       Get Early Access
     </button>
   </section>
@@ -135,12 +133,31 @@
     <p class="max-w-xl mx-auto text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
       We’re launching soon. Join early to claim exclusive perks and get first access to the drops.
     </p>
-    <button class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-8 py-4 rounded-full font-semibold transition button-animate" data-aos="fade-up" data-aos-delay="400">
+    <button
+      onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+      class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-8 py-4 rounded-full font-semibold transition button-animate"
+      data-aos="fade-up"
+      data-aos-delay="400">
       Reserve My Spot
     </button>
-    <form name="waitlist" method="POST" data-netlify="true" action="/thank-you" class="max-w-md mx-auto mt-8" data-aos="fade-up" data-aos-delay="600">
-      <input type="email" name="email" required placeholder="Your email address" class="w-full px-4 py-3 rounded-full text-black mb-4 input-style"/>
-      <button type="submit" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary w-full py-3 rounded-full font-semibold transition button-animate">
+    <form
+      id="waitlist"
+      name="waitlist"
+      method="POST"
+      data-netlify="true"
+      action="/thank-you"
+      class="max-w-md mx-auto mt-8"
+      data-aos="fade-up"
+      data-aos-delay="600">
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Your email address"
+        class="w-full px-4 py-3 rounded-full text-black mb-4 input-style"/>
+      <button
+        type="submit"
+        class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary w-full py-3 rounded-full font-semibold transition button-animate">
         Join the Waitlist
       </button>
     </form>
