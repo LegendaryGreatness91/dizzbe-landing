@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === Custom Animations === */
+/* === Fade Up Animation (only used if AOS is not enabled) === */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -31,12 +31,13 @@
 
 /* === Buttons === */
 .button-animate {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 }
 
 .button-animate:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(255, 106, 0, 0.4);
+  box-shadow: 0 6px 24px rgba(255, 106, 0, 0.4);
+  opacity: 0.95;
 }
 
 /* === Input === */
@@ -53,10 +54,20 @@
 
 /* === Card Hover Animation === */
 .card-animate {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .card-animate:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* === Smooth Image Fade (for hero or background images) === */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img:hover {
+  opacity: 0.95;
 }
