@@ -12,34 +12,35 @@
 <body class="bg-gradient-to-b from-black via-dark to-black text-white font-body relative">
 
   <!-- Header -->
-  <header class="w-full absolute top-0 left-0 z-20">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-6">
-      <a href="/" class="text-2xl font-heading font-bold">
-        Dizzbe
-      </a>
-      <nav class="hidden md:flex space-x-8 text-sm">
-        <a href="#problem" class="hover:text-primary transition">Problem</a>
-        <a href="#solution" class="hover:text-primary transition">Solution</a>
-        <a href="#waitlist" class="hover:text-primary transition">Waitlist</a>
-      </nav>
-      <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })" class="hidden md:inline-block bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-5 py-2 rounded-full font-semibold text-sm transition button-animate">
+  <header class="absolute top-0 left-0 w-full flex items-center justify-between px-4 md:px-8 py-6 z-20">
+    <div class="text-2xl font-heading font-bold">Dizzbe</div>
+    <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#problem" class="hover:text-primary transition">Problem</a>
+      <a href="#solution" class="hover:text-primary transition">Solution</a>
+      <a href="#waitlist" class="hover:text-primary transition">Waitlist</a>
+      <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+        class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-4 py-2 rounded-full font-semibold transition button-animate">
         Join Waitlist
       </button>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95 text-center py-6 space-y-4">
-      <a href="#problem" class="block hover:text-primary transition">Problem</a>
-      <a href="#solution" class="block hover:text-primary transition">Solution</a>
-      <a href="#waitlist" class="block hover:text-primary transition">Waitlist</a>
-      <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.add('hidden');" class="block w-3/4 mx-auto bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-5 py-2 rounded-full font-semibold text-sm transition button-animate">
-        Join Waitlist
-      </button>
-    </div>
+    </nav>
   </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 backdrop-blur flex flex-col items-center justify-center space-y-6 z-30 transition-opacity duration-300">
+    <a href="#problem" class="text-lg hover:text-primary transition">Problem</a>
+    <a href="#solution" class="text-lg hover:text-primary transition">Solution</a>
+    <a href="#waitlist" class="text-lg hover:text-primary transition">Waitlist</a>
+    <button
+      onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.add('hidden');"
+      class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate mt-4">
+      Join Waitlist
+    </button>
+  </div>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
@@ -53,7 +54,11 @@
     <p class="max-w-2xl mx-auto mb-8 text-gray-400 text-lg z-10" data-aos="fade-up" data-aos-delay="200">
       Discover curated fashion from underground brands, tailored to your style in seconds. Dizzbe makes shopping feel effortless, exclusive, and addictive.
     </p>
-    <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate z-10" data-aos="fade-up" data-aos-delay="400">
+    <button
+      onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+      class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate z-10"
+      data-aos="fade-up"
+      data-aos-delay="400">
       Get Early Access
     </button>
   </section>
@@ -77,37 +82,46 @@
       Your Style, Curated by AI That Actually Gets You.
     </h2>
     <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-left">
-      <!-- Cards here... -->
-      <!-- Same as before -->
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-primary font-semibold mb-2">1. Set Your Vibe</h3>
+        <p class="text-gray-400">Tell us your style or let our AI read the room and figure it out for you.</p>
+      </div>
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-primary font-semibold mb-2">2. Explore Fresh Drops</h3>
+        <p class="text-gray-400">Discover new collections tailored to your taste in seconds.</p>
+      </div>
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="text-primary font-semibold mb-2">3. Shop Effortlessly</h3>
+        <p class="text-gray-400">One tap to buy. No clutter. No noise. Just your next favorite piece.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Social Proof Logos -->
-  <section class="py-16 bg-dark text-center px-4">
-    <h3 class="text-gray-500 uppercase text-sm tracking-widest mb-6" data-aos="fade-up">
-      Curated From
-    </h3>
-    <div class="flex flex-wrap justify-center gap-8" data-aos="fade-up" data-aos-delay="200">
-      <img src="/images/shopify.svg" alt="Shopify" class="h-10">
-      <img src="/images/Etsy.png" alt="Etsy" class="h-10">
-      <img src="/images/depop.png" alt="Depop" class="h-10">
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-24 md:py-32 lg:py-40 bg-dark text-center px-4">
+  <!-- Waitlist Section -->
+  <section id="waitlist" class="py-24 md:py-32 lg:py-40 bg-dark text-center px-4">
     <h2 class="text-2xl md:text-5xl font-heading font-bold mb-6 leading-tight tracking-tight" data-aos="fade-up">
       Be the First to Unlock the New Era of Shopping
     </h2>
     <p class="max-w-xl mx-auto text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
       We’re launching soon. Join early to claim exclusive perks and get first access to the drops.
     </p>
-    <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-8 py-4 rounded-full font-semibold transition button-animate" data-aos="fade-up" data-aos-delay="400">
-      Reserve My Spot
-    </button>
-    <form id="waitlist" name="waitlist" method="POST" data-netlify="true" action="/thank-you" class="max-w-md mx-auto mt-8" data-aos="fade-up" data-aos-delay="600">
-      <input type="email" name="email" required placeholder="Your email address" class="w-full px-4 py-3 rounded-full text-black mb-4 input-style"/>
-      <button type="submit" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary w-full py-3 rounded-full font-semibold transition button-animate">
+    <form
+      name="waitlist"
+      method="POST"
+      data-netlify="true"
+      action="/thank-you"
+      class="max-w-md mx-auto mt-8"
+      data-aos="fade-up"
+      data-aos-delay="400">
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Your email address"
+        class="w-full px-4 py-3 rounded-full text-black mb-4 input-style"/>
+      <button
+        type="submit"
+        class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary w-full py-3 rounded-full font-semibold transition button-animate">
         Join the Waitlist
       </button>
     </form>
@@ -118,18 +132,15 @@
     © 2025 Dizzbe. All rights reserved.
   </footer>
 
-  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
     const menuBtn = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
     const links = menu.querySelectorAll('a');
-
     menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
     links.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
   </script>
-
   <script async defer data-domain="dizzbe.xyz" src="https://plausible.io/js/plausible.js"></script>
   <script src="./js/main.js"></script>
 </body>
