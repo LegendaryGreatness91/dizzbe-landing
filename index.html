@@ -35,8 +35,7 @@
     <a href="#problem" class="text-lg hover:text-primary transition">Problem</a>
     <a href="#solution" class="text-lg hover:text-primary transition">Solution</a>
     <a href="#waitlist" class="text-lg hover:text-primary transition">Waitlist</a>
-    <button
-      onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.add('hidden');"
+    <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.add('hidden');"
       class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate mt-4">
       Join Waitlist
     </button>
@@ -54,11 +53,9 @@
     <p class="max-w-2xl mx-auto mb-8 text-gray-400 text-lg z-10" data-aos="fade-up" data-aos-delay="200">
       Discover curated fashion from underground brands, tailored to your style in seconds. Dizzbe makes shopping feel effortless, exclusive, and addictive.
     </p>
-    <button
-      onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
+    <button onclick="document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' })"
       class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-6 py-3 rounded-full font-semibold transition button-animate z-10"
-      data-aos="fade-up"
-      data-aos-delay="400">
+      data-aos="fade-up" data-aos-delay="400">
       Get Early Access
     </button>
   </section>
@@ -97,7 +94,57 @@
     </div>
   </section>
 
-  <!-- Waitlist Section -->
+  <!-- Unique Value Section -->
+  <section class="py-24 md:py-32 lg:py-40 bg-dark text-center px-4">
+    <h2 class="text-2xl md:text-5xl font-heading font-bold mb-12 leading-tight tracking-tight" data-aos="fade-up">
+      Why Dizzbe Is Different
+    </h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-left">
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-primary font-semibold mb-2">Authentic Brands Only</h3>
+        <p class="text-gray-400">Underground, independent labels you won’t see blasted all over big-box stores.</p>
+      </div>
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-primary font-semibold mb-2">True Personalization</h3>
+        <p class="text-gray-400">AI that actually learns your taste, budget, and vibe — not just what advertisers pay to push.</p>
+      </div>
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="text-primary font-semibold mb-2">No Middlemen Markups</h3>
+        <p class="text-gray-400">Buy direct. Support creators. Keep your money out of bloated retailer margins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Section -->
+  <section class="py-24 md:py-32 lg:py-40 bg-dark text-center px-4">
+    <h2 class="text-2xl md:text-5xl font-heading font-bold mb-12 leading-tight tracking-tight" data-aos="fade-up">
+      Fashion Insiders Are Already Talking:
+    </h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-gray-300 italic">"Dizzbe feels like the secret backdoor to the coolest brands on the internet."</p>
+        <p class="text-primary font-semibold mt-4">– Early Beta User</p>
+      </div>
+      <div class="bg-[#111] rounded-lg p-6 card-animate" data-aos="fade-up" data-aos-delay="400">
+        <p class="text-gray-300 italic">"Finally, an app that gets my style and doesn’t shove sponsored trash in my face."</p>
+        <p class="text-primary font-semibold mt-4">– Beta Tester</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Logos -->
+  <section class="py-16 bg-dark text-center px-4">
+    <h3 class="text-gray-500 uppercase text-sm tracking-widest mb-6" data-aos="fade-up">
+      Curated From
+    </h3>
+    <div class="flex flex-wrap justify-center gap-8" data-aos="fade-up" data-aos-delay="200">
+      <img src="/images/shopify.svg" alt="Shopify" class="h-10">
+      <img src="/images/Etsy.png" alt="Etsy" class="h-10">
+      <img src="/images/depop.png" alt="Depop" class="h-10">
+    </div>
+  </section>
+
+  <!-- CTA Section -->
   <section id="waitlist" class="py-24 md:py-32 lg:py-40 bg-dark text-center px-4">
     <h2 class="text-2xl md:text-5xl font-heading font-bold mb-6 leading-tight tracking-tight" data-aos="fade-up">
       Be the First to Unlock the New Era of Shopping
@@ -105,22 +152,11 @@
     <p class="max-w-xl mx-auto text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
       We’re launching soon. Join early to claim exclusive perks and get first access to the drops.
     </p>
-    <form
-      name="waitlist"
-      method="POST"
-      data-netlify="true"
-      action="/thank-you"
-      class="max-w-md mx-auto mt-8"
-      data-aos="fade-up"
-      data-aos-delay="400">
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="Your email address"
+    <form name="waitlist" method="POST" data-netlify="true" action="/thank-you"
+      class="max-w-md mx-auto mt-8" data-aos="fade-up" data-aos-delay="400">
+      <input type="email" name="email" required placeholder="Your email address"
         class="w-full px-4 py-3 rounded-full text-black mb-4 input-style"/>
-      <button
-        type="submit"
+      <button type="submit"
         class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary w-full py-3 rounded-full font-semibold transition button-animate">
         Join the Waitlist
       </button>
@@ -142,6 +178,5 @@
     links.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
   </script>
   <script async defer data-domain="dizzbe.xyz" src="https://plausible.io/js/plausible.js"></script>
-  <script src="./js/main.js"></script>
 </body>
 </html>
