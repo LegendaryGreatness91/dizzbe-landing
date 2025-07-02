@@ -176,6 +176,17 @@
     © 2025 Dizzbe. All rights reserved.
   </footer>
 
+    <!-- Scroll to top button -->
+  <button
+  id="scrollToTopBtn"
+  class="hidden fixed bottom-6 right-6 p-3 rounded-full bg-gradient-to-r from-primary to-secondary shadow-lg hover:scale-105 transition transform z-50"
+  aria-label="Scroll to top">
+  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
@@ -188,6 +199,28 @@
     closeBtn.addEventListener('click', () => menu.classList.add('hidden'));
     links.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
   </script>
-  
+
+<!-- Plausible Analytics -->
+<script async defer data-domain="dizzbe.xyz" src="https://plausible.io/js/plausible.js"></script>
+
+<script src="./js/main.js"></script>
+
+<!-- Scroll to Top Script -->
+<script>
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.remove('hidden');
+    } else {
+      scrollBtn.classList.add('hidden');
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
+
